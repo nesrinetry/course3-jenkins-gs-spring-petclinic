@@ -33,8 +33,13 @@ class VetTests {
 		vet.setLastName("Beeblebrox");
 		vet.setId(123);
 		Vet other = (Vet) SerializationUtils.deserialize(SerializationUtils.serialize(vet));
+<<<<<<< HEAD
 		assertThat(other.getFirstName()).isEqualTo(vet.getFirstName()));
 		assertThat(other.getLastName()).isEqualTo(vet.getLastName());
+=======
+		assertThat(other.getFirstName()).isEqualTo(vet.getFirstName());
+		assertThat(other.getLastName()).isEqualTo("bar");
+>>>>>>> 29ca783752c6af7e78229ba9c9f3cffb17cb8a70
 		assertThat(other.getId()).isEqualTo(vet.getId());
 	}
 
